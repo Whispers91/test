@@ -1,0 +1,148 @@
+.about-us-top .container {
+    margin-top: 4em;
+    display: flex;
+}
+
+.top-text {
+    padding-left: 10em;
+}
+
+.top-text h1 {
+    font-weight: 700;
+    font-size: 3em;
+    color: var(--primary-color);
+}
+
+.top-text span {
+    font-weight: 700;
+    color: var(--orange-color);
+}
+
+.top-text p {
+    padding-left: 3.5em;
+    margin-top: 1.4em;
+    font-weight: 400;
+    font-size: 1.125em;
+    color: #616161;
+}
+
+.top-button {
+    margin-top: 2em;
+}
+
+.top-button a {
+    background: var(--orange-color);
+    padding: .8em;
+    padding-inline: 3em;
+    border-radius: 0.325em;
+    color: var(--white-color);
+}
+
+
+.about-us-mid .container {
+    margin-top: 5em;
+    display: flex;
+    gap: 1em;
+}
+
+.our-vision {
+    width: 50%;
+    background: var(--yellow-color);
+    padding: 2.5em;
+    border-radius: 0.325em;
+}
+.our-goal {
+    width: 50%;
+    background: var(--blue-color);
+    padding: 2.5em;
+    border-radius: 0.325em;
+}
+
+.vision-header h1{
+    /* margin-top: .2em; */
+    font-weight: 700;
+    font-size: 3em;
+    color: var(--white-color);
+}
+
+.vision-text p:nth-of-type(1) {
+    /* margin-top: .4em; */
+    padding-left: 1em;
+    font-weight: 600;
+    font-size: 1.625em;
+    color: var(--white-color);
+}
+
+.vision-text p:nth-of-type(2) {
+    padding-left: 4.5em;
+    margin-top: 2em;
+    font-weight: 400;
+    font-size: 1.125em;
+    color: var(--white-color);
+}
+
+.our-goal-header h1 {
+    margin-top: .2em;
+    font-weight: 700;
+    font-size: 3em;
+    color: var(--white-color);
+}
+
+.our-goal-text p:nth-of-type(1) {
+    padding-left: 7em;
+    font-weight: 600;
+    font-size: 1.625em;
+    color: var(--white-color);
+}
+
+.our-goal-text p:nth-of-type(2) {
+    padding-left: 6em;
+    margin-top: 1em;
+    font-weight: 400;
+    font-size: 1.125em;
+    color: var(--white-color);
+}
+
+.about-us-bottom .container {
+    margin-top: 2em;
+}
+
+.bottom-vid video{
+    width: 100%;
+    border-radius: 0.625em;
+}
+
+.bottom-text {
+    margin-top: 1.5em;
+    display: flex;
+    align-items: center;
+}
+
+.text-header {
+    width: 50%;
+}
+
+.text-header h1 {
+    font-weight: 700;
+    font-size: 4em;
+}
+
+.text-header span:nth-of-type(1) {
+    color: var(--primary-color);
+}
+.text-header span:nth-of-type(2) {
+    color: var(--yellow-color);
+}
+.text-header span:nth-of-type(3) {
+    color: var(--orange-color);
+}
+
+.text-p {
+    width: 50%;
+}
+
+.text-p p {
+    font-weight: 400;
+    font-size: 1.125em;
+    color: #909090;
+}
