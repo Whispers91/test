@@ -17,7 +17,14 @@
 // }
 
 // Question 3
-
+// function arrayValuesTypes(arr) {
+// 	var mynewarr=[]
+// 	for (i=0;i<arr.length;i++) {
+// 		mynewarr[i]=typeof(arr[i])
+// 	}
+	
+// 	return mynewarr
+// }
 
 // Question 4
 // function getSumOfItems(arr) {
