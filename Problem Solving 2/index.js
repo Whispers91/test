@@ -10,8 +10,36 @@ var deepCopy = JSON.parse(JSON.stringify(deepArray))
 deepCopy[0].push("is great")
 console.log(deepArray[0])
 console.log(deepCopy[0])
-
 // console.log(deepArray[0]) !== console.log(deepCopy[0])
+
+
+// Hoisting (All declarations can be hoisted, but not all will produce the same results and some will contain errors and stop the code from executing)
+hello();
+
+function hello() {
+    console.log("Hello, world!");
+}
+
+// Expression Functions aren't hoisted in the same way
+greet(); 
+
+const greet = function () {
+    console.log("Hi there!");
+};
+
+// Var
+console.log(a); ✅ Undefined
+var a = 10;
+console.log(a); // 10
+// For JS the code is written as so
+var a;
+console.log(a); // Undefined
+a = 10;
+console.log(a); // 10
+
+// When it comes to let and const, they are hoisted but they won't produce a result, rather an error stating that the variable couldn't be accessed
+console.log(b); // ReferenceError: Cannot access 'b' before initialization
+let b = 20;
 
 // Question 1
 // function triArea(base, height) {
