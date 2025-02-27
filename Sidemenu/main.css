@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Manrope", serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+html {
+    font-size: 1em;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+.container {
+    padding: 5em;
+}
+
+
+.products-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.products-header h2 {
+    font-size: 2em;
+    font-weight: 800;
+    color: #000;
+}
+
+.products-header span {
+    color: rgb(92, 175, 144);
+}
+
+
+.products-categories ul {
+    display: flex;
+    gap: 2em;
+    align-items: center;
+}
+
+.products-categories li {
+    cursor: pointer;
+}
+
+.products-categories li.active {
+    color: rgb(92, 175, 144);
+}
+
+.products_cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    margin-top: 2em;
+}
+
+.card-body {
+    width: calc((100% - 6em) / 4);
+    border: 1px solid #000;
+    border-radius: .5em;
+    overflow: hidden;
+} 
+
+
+.img {
+    width: 100%;
+    border-bottom: 1px solid #000;
+    
+}
+
+.img img {
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.card-content {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: .8em;
+}
+
+.card-content p:nth-of-type(1) {
+    font-size: 1em;
+    font-weight: 800;
+    color: #636c74;
+}
+
+.card-price {
+    display: flex;
+    gap: 1em;
+}
+
+.side .container {
+    position: fixed;
+    right: 0;
+    top: 20%;
+}
+
+.side-button{
+    width: 2em;
+}
+
+.side-menu {
+    position: fixed;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+}
+
+.side-menu.active {
+    visibility: visible;
+    opacity: 1;
+    /* right: 10%; */
+    /* animation: movePosX .5s ease-in-out 0s 1 forwards; */
+}
+
+/* .animation {
+    transition: .5s .5s ease-in-out side-menu;
+    transform: translateX(-100%);
+} */
+
+@keyframes movePosX {
+    from {
+        right: -100%;
+    }
+    to {
+        right: 0px;
+    }
+}
+@keyframes moveNegX {
+    from {
+        right: 0px;
+    }
+    to {
+        right: -100%;
+    }
+}
+
+
+.side-menu .group {
+    width: 50%;
+    height: 100%;
+    background: white;
+    padding: 3em;
+}
+
+.group .top {
+    border-bottom: 1px solid #000;
+}
+
+.top i {
+    cursor: pointer;
+}
+
+.select {
+    margin-top: 2em;
+}
+
+.palletes {
+    margin-top: 2em;
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.palletes-colors {
+    width: 3em;
+    height: 3em;
+    border-radius: 1em;
+    background: red;
+    cursor: pointer;
+}
+
+.color-modes {
+    margin-top: 4em;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
+}
+
+body.active {
+    background: #161a2a;
+}
+
+
+.products-swiper {
+    /* background: #000; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    padding: 2em;
+}
+
+.left-button {
+    background: grey;
+    width: 2em;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5em;
+    cursor: pointer;
+}
+
+.right-button {
+    background: grey;
+    width: 2em;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5em;
+    cursor: pointer;
+}
+
+.popups {
+    width: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(3px);
+    /* background: black; */
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s 0s ease-in-out;
+
+}
+
+.popups_container {
+    width: 100%;
+    height: 40%;
+    padding: 2em;
+    background: white;
+    border: 1px solid black;
+    border-radius: 1em;
+    display: flex;
+    gap: 1em;
+}
+
+.popups.active {
+    visibility: visible;
+    opacity: 1;
+    transition: .5s 0s ease-in-out;
+}
+
+.popups-LHS {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    border: 1px solid grey;
+    border-radius: .5em;
+    overflow: hidden;
+}
+
+.popups-LHS img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.button {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.popups-RHS {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.weights {
+    display: flex;
+    gap: 1em;
+}
