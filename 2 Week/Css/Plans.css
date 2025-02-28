@@ -1,0 +1,75 @@
+.plans {
+    margin-top: 2em;
+}
+
+.plan-description {
+    display: flex;
+}
+
+.plan-text p{
+    margin-top: 1.5em;
+}
+
+.plan-buttons {
+    display: flex;
+    gap: 1em;
+    background: black;
+    height: fit-content;
+    padding: .5em;
+    border-radius: .5em;
+}
+
+.plan-buttons a {
+    padding: .8em;
+}
+
+.plan-buttons a:hover {
+    color: white;
+    background: #1F1F1F;
+    border-radius: .5em;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2em;
+}
+
+.card-template {
+    width: calc((100% - 4em) / 3);
+    background: #1A1A1A;
+    border-radius: .5em;
+    padding: 1.5em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+
+.card-template h2 {
+    color: white;
+}
+
+.card-template p {
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+    height: 4.5em;
+}
+
+
+.card-buttons a:nth-of-type(1) {
+    background: #141414;
+    color: white;
+    padding: 1em;
+    border-radius: .5em;
+    margin-right: 1.5em;
+}
+
+.card-buttons a:nth-of-type(2) {
+    background: #E50000;
+    color: white;
+    padding: 1em;
+    border-radius: .5em;
+}

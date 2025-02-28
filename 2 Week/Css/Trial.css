@@ -1,0 +1,38 @@
+.trial {
+    margin-top: 2em;
+}
+
+.trial .container{
+    border: 1px solid #0F0F0F;
+    object-fit: cover;
+    height: 30vh;
+}
+
+.trial-content {
+    background: url("../Assets/Images/Background Images.png");
+    background-size: cover;
+    border-radius: .5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.trial-text {
+    margin-top: 4em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: center;
+}
+
+
+.button a {
+    padding: 1em;
+    background-color: #E50000;
+    border-radius: .4em;
+    color: white;
+    display: flex;
+    flex-shrink: 0;
+}
