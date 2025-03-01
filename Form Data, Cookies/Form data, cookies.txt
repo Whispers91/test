@@ -1,0 +1,99 @@
+Form data refers to the information entered into an HTML form by a user. When a user fills out a form (e.g., entering their name, email, or password) and submits it, the data can be processed in different ways
+
+Uses of Form Data
+User Authentication: Login/signup forms send user credentials to the backend.
+Search & Filtering: Search bars collect input and display results dynamically.
+Surveys & Feedback: Users submit responses to be saved in a database.
+Payments: Forms collect credit card and billing details.
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Data Example</title>
+</head>
+<body>
+    <form id="simpleForm">
+        <input type="text" id="name" placeholder="Enter your name">
+        <button type="submit">Submit</button>
+    </form>
+    <p id="output"></p>
+
+    <script>
+        document.getElementById("simpleForm").addEventListener("submit", function(event) {
+            event.preventDefault();  // Stop page reload
+            let name = document.getElementById("name").value;
+            document.getElementById("output").innerText = "Hello, " + name + "!";
+        });
+    </script>
+</body>
+</html>
+---------------------------------------------------------------------------------------------------
+Cookies are small text files stored in a user's browser by a website. They help websites remember user preferences, login sessions, and other stateful information.
+
+User Authentication – Websites remember logged-in users with a session cookie.
+Personalization – Preferences like dark mode or language settings can be stored.
+Tracking & Analytics – Sites track user behavior for statistics and targeted ads.
+Cart Functionality – E-commerce sites store shopping cart items in cookies.
+
+When you log into a website, a session cookie is created so that you remain logged in even after refreshing the page.
+
+---------------------------------------------------------------------------------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies Example</title>
+</head>
+<body>
+    <form id="cookieForm">
+        <label for="username">Enter your name:</label>
+        <input type="text" id="username">
+        <button type="submit">Save</button>
+    </form>
+
+    <p id="greeting"></p>
+
+    <script>
+        // Function to set a cookie
+        function setCookie(name, value, days) {
+            let expires = "";
+            if (days) {
+                let date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + value + "; path=/" + expires;
+        }
+
+        // Function to get a cookie
+        function getCookie(name) {
+            let cookies = document.cookie.split("; ");
+            for (let cookie of cookies) {
+                let [key, value] = cookie.split("=");
+                if (key === name) return value;
+            }
+            return "";
+        }
+
+        document.getElementById("cookieForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            let username = document.getElementById("username").value;
+            setCookie("username", username, 7); // Store for 7 days
+            document.getElementById("greeting").innerText = "Welcome back, " + username + "!";
+        });
+
+        // Check if cookie exists on page load
+        window.onload = function() {
+            let savedName = getCookie("username");
+            if (savedName) {
+                document.getElementById("greeting").innerText = "Welcome back, " + savedName + "!";
+            }
+        };
+    </script>
+</body>
+</html>
