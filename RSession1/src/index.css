@@ -1,0 +1,90 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    padding: 10em;
+}
+
+.cards-container {
+    margin-top: 2em;
+    display: flex;
+    gap: 1em;
+}
+
+.card {
+    position: relative;
+    width: calc((100% - 2em) / 3);
+}
+
+.card-img img {
+    width: 100%;
+    filter: brightness(65%);
+    border-radius: 1.5em;
+}
+
+.card-text {
+    position: absolute;
+    bottom: 15%;
+    left: 10%;
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+    width: 80%;
+    opacity: 0;
+    transition: 1s;
+}
+
+.card-text:hover {
+    opacity: 1;
+}
+
+.card-text.button {
+    position: absolute;
+    bottom: 25%;
+    left: 40%;
+}
+
+.card-text.button a {
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    border: 1px solid white;
+    border-radius: 1em;
+    padding: .5em;
+}
+
+.card-text.hidden {
+    position: absolute;
+    bottom: 15%;
+}
+
+.card-text.button, .card-text.hidden {
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    position: absolute;
+    color: white;
+    font-size: 18px;
+}
+
+.card-text.button {
+    opacity: 1;
+    visibility: visible;
+}
+
+.card-text.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.card-hover-text:hover .card-text.button {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.card-hover-text:hover .card-text.hidden {
+    opacity: 1;
+    visibility: visible;
+}
