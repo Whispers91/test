@@ -1,0 +1,25 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    font-family: "Outfit", sans-serif;
+    
+}
+
+body {
+    font-size: 1.1em;
+    overflow-x: hidden;
+}
+
+.accordion {
+    border: 1px solid #000;
+}
+
+.accordion-header {
+    background: #bbb;
+    padding: .5em;
+}
+
+.accordion-content {
+    padding: .5em;
+}
